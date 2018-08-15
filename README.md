@@ -1,4 +1,4 @@
-## Travel Insurance Project
+# Travel Insurance
 ## Buy Insurance
 
-## To run this project type command npm start
+ To run this project type command npm start
