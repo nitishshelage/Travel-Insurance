@@ -1,0 +1,14 @@
+.verticalLine {
+    border-left: thick solid #ff0000;
+  }
+
+.text-style{
+  padding-left: 15px;
+  font-weight: 100;
+}
+.left-space{
+  padding-left: 10px;
+}
+.top-space{
+  padding-top: 30px;
+}

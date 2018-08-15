@@ -1,4 +1,10 @@
 .App {
-  
+   
 }
 
+.header-style{
+    font-weight: 100;
+}
+.bottom-border{
+    border-bottom: 5px solid #f32f2fcf;
+}
