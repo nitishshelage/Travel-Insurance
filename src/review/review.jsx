@@ -6,16 +6,23 @@ import UserButton from '../shared/user-button/user-button'
 class Review extends React.Component{
     constructor(props){
         super();
+        this.state ={
+            disable: false
+        }
+        this.handleNextBtnClick = this.handleNextBtnClick.bind(this);
     }
     nextPageEvent =() =>{
         this.props.history.push('/acknowledgement');
+    }
+    handleNextBtnClick = (args) =>{
+        this.setState({disable: args});
     }
     render(){
         return(
             <div>
                 <h2 className="text-muted">Review and confirm</h2>
-               <ContactInfo isEdit={true}/>
-               <UserButton text="Buy now" btnClass="text-right" clickEvent={this.nextPageEvent}/>
+               <ContactInfo isEdit={true} handleBtn={this.handleNextBtnClick}/>
+               <UserButton text="Buy now" btnClass="text-right" disable={this.state.disable} clickEvent={this.nextPageEvent}/>
             </div>
         )
     }

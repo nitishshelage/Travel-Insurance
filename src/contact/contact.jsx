@@ -14,7 +14,7 @@ class Contact extends React.Component{
         return(
             <div>
                <ContactInfo isEdit={false}/>
-               <UserButton text="Confirm" btnClass="text-right" clickEvent={this.nextPageEvent}/>
+               <UserButton text="Confirm" btnClass="text-right" disable={false} clickEvent={this.nextPageEvent}/>
             </div>
         )
     }

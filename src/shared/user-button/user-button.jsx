@@ -11,9 +11,16 @@ class UserButton extends React.Component{
       }
     
     render(){
+        var disabled = this.props.disable;
+        var btn;
+        if(disabled){
+            btn = <Button className="btn btn-danger btn-lg" onClick={()=>this.handleClick()} disabled>{this.props.text}</Button>;
+        } else {
+            btn = <Button className="btn btn-danger btn-lg" onClick={()=>this.handleClick()}>{this.props.text}</Button>;
+        }
         return(
             <div className={`${ this.props.btnClass }`}>
-                 <Button className="btn btn-danger btn-lg" onClick={()=>this.handleClick()}>{this.props.text}</Button>
+                 {btn}
             </div>
         )
     }

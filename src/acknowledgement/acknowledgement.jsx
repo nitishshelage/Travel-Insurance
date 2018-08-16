@@ -26,7 +26,7 @@ class Acknowledgement extends React.Component{
                     </div>
                 </Panel.Body>
               </Panel>
-               <UserButton text="Buy new policy" btnClass="text-center" clickEvent={this.nextPageEvent}/>
+               <UserButton text="Buy new policy" btnClass="text-center" disable={false} clickEvent={this.nextPageEvent}/>
             </div>
         )
     }

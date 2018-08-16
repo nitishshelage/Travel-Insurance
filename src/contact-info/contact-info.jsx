@@ -31,9 +31,11 @@ class ContactInfo extends React.Component{
     }
     handleEditClick() {
         this.setState({showEdit: true});
+        this.props.handleBtn(true);
     }
     handleSaveClick() {
-        this.setState({showEdit: false})
+        this.setState({showEdit: false});
+        this.props.handleBtn(false);
     }
     
     updateContent(event){
