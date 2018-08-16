@@ -1,24 +1,22 @@
 import React from 'react';
 import './contact.css';
+import {withRouter} from 'react-router-dom';
 import ContactInfo from '../contact-info/contact-info';
-import {Button} from 'react-bootstrap'
+import UserButton from '../shared/user-button/user-button'
 class Contact extends React.Component{
     constructor(props){
         super();
-      
     }
-   
-
-
+    nextPageEvent =() =>{
+        this.props.history.push('/review');
+    }
     render(){
         return(
             <div>
-               <ContactInfo />
-               <div className="text-right">
-                <Button className="btn btn-danger btn-lg float-right">Confirm</Button>
-                </div>
+               <ContactInfo isEdit={false}/>
+               <UserButton text="Confirm" btnClass="text-right" clickEvent={this.nextPageEvent}/>
             </div>
         )
     }
 }
-export default Contact;
+export default withRouter(Contact);

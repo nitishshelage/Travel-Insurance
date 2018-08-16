@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import Contact from './contact/contact';
+import Review  from './review/review';
+import Acknowledgement from './acknowledgement/acknowledgement';
+import {BrowserRouter, Link, Route} from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
+  constructor(props){
+    super();
+   
+  }
   render() {
     return (
       <div className="App">
@@ -18,7 +25,13 @@ class App extends Component {
           3. Acknowledgement
         </div>
        </div>
-       <Contact />
+       <BrowserRouter>
+          <div>
+            <Route  exact path="/" component={Contact}/>
+            <Route exact path="/review" component={Review}/>
+            <Route exact path="/acknowledgement" component={Acknowledgement}/>
+          </div>
+        </BrowserRouter>
       </div>
     );
   }
