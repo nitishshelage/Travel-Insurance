@@ -8,7 +8,8 @@ class ContactInfo extends React.Component{
         this.state={
             givenName:'',
             familyName:'',
-            showEdit: false
+            showEdit: false,
+            showError: false
         }
         this.handleEditClick = this.handleEditClick.bind(this);
         this.updateContent = this.updateContent.bind(this);
@@ -34,8 +35,12 @@ class ContactInfo extends React.Component{
         this.props.handleBtn(true);
     }
     handleSaveClick() {
-        this.setState({showEdit: false});
-        this.props.handleBtn(false);
+        if(this.state.givenName.trim() === '' || this.state.familyName.trim() === ''){
+            this.setState({showError: true});
+        } else {
+            this.setState({showEdit: false});
+            this.props.handleBtn(false);
+        }
     }
     
     updateContent(event){
@@ -74,7 +79,7 @@ class ContactInfo extends React.Component{
                 </div>
               
                 <h5 className="left-space">*Marked fields must be completed, and can only be completed in English.</h5>
-                <ContactDetails name={this.state} updateData={this.updateContent}/>
+                <ContactDetails name={this.state} updateData={this.updateContent} showError={this.state.showError}/>
             </div>
         )
     }
