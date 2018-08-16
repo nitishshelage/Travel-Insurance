@@ -11,6 +11,5 @@ class DateFormat extends React.Component{
             </span>
         )
     }
-   
 } 
 export default DateFormat;

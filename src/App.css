@@ -1,5 +1,5 @@
-.App {
-   
+.App .progress {
+    height: 8px;
 }
 
 .header-style{
@@ -7,4 +7,34 @@
 }
 .bottom-border{
     border-bottom: 5px solid #f32f2fcf;
+}
+
+@media (min-width: 1200px) {
+    .txt-sz {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .txt-sz {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .txt-sz {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .txt-sz {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .txt-sz {
+        font-size: 7px;
+    }
 }

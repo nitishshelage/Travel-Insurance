@@ -7,9 +7,8 @@ import {Glyphicon} from 'react-bootstrap';
 class Acknowledgement extends React.Component{
     constructor(props){
         super();
-        var now = new Date();
         this.state = {
-           date : now
+           date : new Date()
         }
     }
     nextPageEvent =() =>{

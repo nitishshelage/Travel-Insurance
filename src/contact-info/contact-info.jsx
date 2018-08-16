@@ -61,12 +61,12 @@ class ContactInfo extends React.Component{
         return(
             <div>
                 <div className="row">
-                    <div className="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                    <div className="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                         <h3 className="verticalLine">
                             <span className="text-style text-muted">Contact details</span>
                         </h3>
                     </div>
-                    <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                      {button}
                     </div>
                 </div>
